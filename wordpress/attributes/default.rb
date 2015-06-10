@@ -1,5 +1,6 @@
 # Default configuration for the AWS OpsWorks cookbook for Wordpress
-#
+
+include_attribute 'deploy'
 
 # Enable the Wordpress W3 Total Cache plugin (http://wordpress.org/plugins/w3-total-cache/)?
 default['wordpress']['wp_config']['enable_W3TC'] = false
