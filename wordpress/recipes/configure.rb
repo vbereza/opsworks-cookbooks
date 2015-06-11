@@ -37,9 +37,9 @@ node[:deploy].each do |app_name, deploy|
             :password => (deploy[:database][:password] rescue nil),
             :database => (deploy[:database][:database] rescue nil)
         )
-      only_if do
-        File.directory?("#{deploy[:deploy_to]}/current")
-      end
+        only_if do
+            File.directory?("#{deploy[:deploy_to]}/current")
+        end
     end
 end
 
