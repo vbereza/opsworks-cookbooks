@@ -31,7 +31,7 @@ node[:deploy].each do |app_name, deploy|
         end
 
         variables(
-            :keys => (keys rescue nil)
+            :keys => (keys rescue nil),
             :host => (deploy[:database][:host] rescue nil),
             :user => (deploy[:database][:username] rescue nil),
             :password => (deploy[:database][:password] rescue nil),
